@@ -7,7 +7,7 @@ export default function App() {
       <h2>A website in react</h2>
       <img
         style={{ width: "50%", height: "50%" }}
-        src="https://reactjs.org/logo-og.png"
+        src="https://www.reactjs.org/logo-og.png"
         alt="React Image"
       />
     </div>
