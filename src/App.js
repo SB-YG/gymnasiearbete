@@ -3,8 +3,8 @@ import "./styles.css";
 export default function App() {
   return (
     <div className="App">
-      <h1 style={{ color: "green" }}>Hello World</h1>
-      <h2>A website in react in the making</h2>
+      <h1 style={{ color: "green" }}>Gymnasiearbete</h1>
+      <h2>A website in react</h2>
       <img
         style={{
           width: "50%",
