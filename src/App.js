@@ -15,6 +15,10 @@ export default function App() {
         src="https://www.reactjs.org/logo-og.png"
         alt="React Image"
       />
+      <ul>
+        <li>https://www.figma.com/</li>
+        <li>https://www.flaticon.com/</li>
+      </ul>
     </div>
   );
 }
