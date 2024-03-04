@@ -2,9 +2,8 @@
   font-family: sans-serif;
   text-align: center;
 }
-.image {
+.image,
+.button {
   width: 50%;
   height: 50%;
-  border-radius: 10px;
-  background-color: red;
 }

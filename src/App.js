@@ -30,7 +30,11 @@ function MyButton() {
     setCount(count + 1);
   }
 
-  return <button onClick={handleClick}>Clicked {count} times</button>;
+  return (
+    <button className="button" onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
 }
 
 /*
