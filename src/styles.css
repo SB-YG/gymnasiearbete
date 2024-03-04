@@ -2,3 +2,9 @@
   font-family: sans-serif;
   text-align: center;
 }
+.image {
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  background-color: red;
+}
