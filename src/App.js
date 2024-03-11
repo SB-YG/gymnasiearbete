@@ -6,17 +6,9 @@ export default function App() {
     <div className="App">
       <h1 style={{ color: "green" }}>Gymnasiearbete</h1>
       <h2>A website in react</h2>
-      <img
-        className="image"
-        src="https://www.reactjs.org/logo-og.png"
-        alt="React Image"
-      />
+      <Image />
       <br />
       <MyButton />
-      <ul>
-        <li>https://www.figma.com/</li>
-        <li>https://www.flaticon.com/</li>
-      </ul>
     </div>
   );
 }
@@ -34,6 +26,16 @@ function MyButton() {
     <button className="button" onClick={handleClick}>
       Clicked {count} times
     </button>
+  );
+}
+
+function Image() {
+  return (
+    <img
+      className="image"
+      src="https://www.reactjs.org/logo-og.png"
+      alt="React Image"
+    />
   );
 }
 
