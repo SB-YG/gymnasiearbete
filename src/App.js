@@ -13,6 +13,7 @@ import NoPage from "./pages/NoPage";
 const App = () => {
   return (
     <div>
+      <>this is on every page</>
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
