@@ -26,9 +26,6 @@ const App = () => {
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
-      <Menu />
-      <h1 style={{ color: "green" }}>Gymnasiearbete</h1>
-      <h2>A website in react</h2>
     </div>
   );
 };
