@@ -1,53 +1,35 @@
 import "./styles.css";
+import "./App.css";
+import Menu from "./Navbar";
 import { useState } from "react";
+// routes
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Discography from "./pages/Discography";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import NoPage from "./pages/NoPage";
 
-export default function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/index" element={<Home />} />
+          <Route path="/discography" element={<Discography />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </BrowserRouter>
+      <Menu />
       <h1 style={{ color: "green" }}>Gymnasiearbete</h1>
       <h2>A website in react</h2>
-      <Image />
-      <br />
-      <MyButton />
     </div>
   );
-}
+};
 
-// functions below;
-
-function MyButton() {
-  const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount(count + 1);
-  }
-
-  return (
-    <button className="button" onClick={handleClick}>
-      Clicked {count} times
-    </button>
-  );
-}
-
-function Image() {
-  return (
-    <img
-      className="image"
-      src="https://www.reactjs.org/logo-og.png"
-      alt="React Image"
-    />
-  );
-}
-
-/*
-      <img
-        style={{
-          className: "image",
-          width: "50%",
-          height: "50%",
-          backgroundColor: "red",
-          borderRadius: "10px",
-        }}
-        src="https://www.reactjs.org/logo-og.png"
-        alt="React Image"
-      />*/
+export default App;
