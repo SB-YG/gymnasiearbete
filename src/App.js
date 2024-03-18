@@ -8,6 +8,7 @@ import Discography from "./pages/Discography";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
+import SongDetails from "./pages/Song";
 
 const App = () => {
   return (
@@ -22,6 +23,8 @@ const App = () => {
           <Route path="/discography" element={<Discography />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/song" element={<SongDetails />} />
+          <Route path="/song/:id" element={<SongDetails />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
