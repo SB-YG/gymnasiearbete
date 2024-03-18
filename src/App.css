@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: auto;
+  overflow-x: hidden;
+}
+.App {
+  font-family: sans-serif;
+  //text-align: center;
+}
+.image,
+.button {
+  width: 50%;
+  height: 50%;
+}
+
+h1 {
+  color: red;
+}
+
+.navbar {
+  width: 100%;
+  background-color: cadetblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid hsla(0, 0%, 0%, 0.54);
+}
+.logo img {
+  height: 30px;
+  width: 30px;
+}
+.menu {
+  display: flex;
+}
+.menu-item {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}

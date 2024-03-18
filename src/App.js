@@ -1,6 +1,5 @@
-import "./styles.css";
 import "./App.css";
-import Menu from "./Navbar";
+import Navbar from "./components/Navbar";
 import { useState } from "react";
 // routes
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -12,8 +11,8 @@ import NoPage from "./pages/NoPage";
 
 const App = () => {
   return (
-    <div>
-      <>this is on every page</>
+    <div className="App">
+      <Navbar />
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
