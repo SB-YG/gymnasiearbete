@@ -6,6 +6,9 @@ export default function Discography() {
     <>
       <Header />
       <h2>Discography Page</h2>
+      <>
+        <a href="/song/1">Song 1</a>
+      </>
       <SpotifyData />
     </>
   );
