@@ -6,7 +6,7 @@ const SongDetails = () => {
   const { id } = useParams();
 
   const songData = {
-    1: { title: "Song 1", artist: "Artist 1", album: "Album xyz" },
+    1: { title: "Beliver", artist: "Imagine Dragons", album: "Evolve (2017)" },
     2: { title: "Song 2", artist: "Artist 2", album: "Album 2" },
     3: { title: "Song 3", artist: "Artist 3", album: "Album 3" },
   };
