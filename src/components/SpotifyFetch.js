@@ -1,96 +1,86 @@
 import React, { useState, useEffect } from "react";
 
-const SpotifyFetch = () => {
-  const [trackDetails, setTrackDetails] = useState(null); // Tillståndsvariabel för låtinformation
-  const [accessToken, setAccessToken] = useState(null); // Tillståndsvariabel för åtkomsttoken
+export default function SpotifyFetch({ type, trackId }) {
+  const [trackDetails, setTrackDetails] = useState(null);
+  const [accessToken, setAccessToken] = useState(null);
 
   useEffect(() => {
-    // Funktion för att hämta åtkomsttoken från Spotifys API
     const fetchAccessToken = async () => {
       try {
-        // Steg 1: Hämta åtkomsttoken från Spotifys API
-        const tokenResponse = await fetch(
-          "https://accounts.spotify.com/api/token",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-              Authorization:
-                "Basic " +
-                btoa(
-                  "2996a4789f6c4508a187d42e86df6eac:eae403656d5d4b4cb324745279a224e1",
-                ),
-            },
-            body: "grant_type=client_credentials",
+        const response = await fetch("https://accounts.spotify.com/api/token", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            Authorization:
+              "Basic " +
+              btoa(
+                "2996a4789f6c4508a187d42e86df6eac:eae403656d5d4b4cb324745279a224e1",
+              ),
           },
-        );
+          body: "grant_type=client_credentials",
+        });
 
-        // Steg 2: Kontrollera om svaret är OK
-        if (!tokenResponse.ok) {
-          console.error("Failed to fetch access token"); // Logga felmeddelande om det inte är OK
-          return; // Avsluta funktionen om det inte är OK
+        if (!response.ok) {
+          throw new Error("Failed to fetch access token");
         }
 
-        // Steg 3: Omvandla svaret till JSON och spara åtkomsttokenen
-        const accessTokenData = await tokenResponse.json();
-        setAccessToken(accessTokenData.access_token); // Uppdatera tillståndet med åtkomsttokenen
+        const data = await response.json();
+        setAccessToken(data.access_token);
+        return data.access_token;
       } catch (error) {
-        console.error("Error fetching access token:", error); // Logga felmeddelandet om något fel uppstår
+        console.error("Error fetching access token:", error);
       }
     };
 
-    // Funktion för att hämta låtinformation med den hämtade åtkomsttokenen
     const fetchTrackDetails = async () => {
       try {
-        // Steg 1: Hämta information om en specifik låt från Spotifys API med den hämtade åtkomsttokenen
-        const trackId = "5VC29kHMkzcaorzPKUqJbl";
+        const accessToken = await fetchAccessToken();
         const response = await fetch(
           `https://api.spotify.com/v1/tracks/${trackId}`,
           {
             method: "GET",
             headers: {
-              Authorization: `Bearer ${accessToken}`, // Använd åtkomsttokenen i autentiseringsheaderen
+              Authorization: `Bearer ${accessToken}`,
             },
           },
         );
 
-        // Steg 2: Kontrollera om svaret för låtinformation är OK
         if (!response.ok) {
-          throw new Error("Failed to fetch track details"); // Kasta ett fel om det inte är OK
+          throw new Error("Failed to fetch track details");
         }
 
-        // Steg 3: Omvandla svaret för låtinformation till JSON och spara låtinformationen
         const data = await response.json();
-        setTrackDetails(data); // Uppdatera tillståndet med låtinformationen
+        setTrackDetails(data);
       } catch (error) {
-        console.error("Error fetching track details:", error); // Logga felmeddelandet om något fel uppstår
+        console.error("Error fetching track details:", error);
       }
     };
 
-    fetchAccessToken(); // Anropa funktionen för att hämta åtkomsttokenen när komponenten renderas
-  }, []);
-
-  useEffect(() => {
-    // Anropa funktionen för att hämta låtinformation när åtkomsttokenen ändras
-    if (accessToken) {
-      fetchTrackDetails();
-    }
-  }, [accessToken]); // Anropa funktionen när accessToken-tillståndet ändras
+    fetchTrackDetails();
+  }, [trackId]);
 
   return (
-    <div>
-      {trackDetails && ( // Visa låtinformationen om den finns tillgänglig
+    <>
+      {/* Villkorlig rendering baserat på type */}
+      {type === "track" ||
+        (!type && trackDetails && (
+          <div>
+            <h3>Track Details</h3>
+            <p>Title: {trackDetails.name}</p>
+            <p>Artist: {trackDetails.artists[0].name}</p>
+            <p>Album: {trackDetails.album.name}</p>
+            <p>track</p>
+          </div>
+        ))}
+
+      {type === "album" && trackDetails && (
         <div>
-          <h3>Track Details</h3>
-          <p>Title: {trackDetails.name}</p>
-          <p>Artist: {trackDetails.artists[0].name}</p>
+          <h3>Album Details</h3>
           <p>Album: {trackDetails.album.name}</p>
-          <p>AccessToken: accessToken</p>
-          {/* Visa övriga detaljer om låten om det behövs */}
+          <p>Artist: {trackDetails.artists[0].name}</p>
+          {/* Add more album details if needed */}
         </div>
       )}
-    </div>
+    </>
   );
-};
-
-export default SpotifyFetch;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
+import SpotifyFetch from "../components/SpotifyFetch";
 
 const SongDetails = () => {
   const { id } = useParams();
@@ -22,6 +23,8 @@ const SongDetails = () => {
           <p>Title: {song.title}</p>
           <p>Artist: {song.artist}</p>
           <p>Album: {song.album}</p>
+          <hr />
+          <SpotifyFetch trackId="1r9xUipOqoNwggBpENDsvJ" />
         </div>
       ) : (
         <p>Song not found</p>
