@@ -17,6 +17,7 @@ body {
 
 .nav > .nav-header {
   display: inline;
+  user-select: none;
 }
 
 .nav > .nav-header > .nav-title {
