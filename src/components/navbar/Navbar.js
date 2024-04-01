@@ -42,7 +42,7 @@ function NavbarLink({ a }) {
 function Image() {
   return (
     <img
-      src="sound.png"
+      src="/sound.png"
       style={{
         width: "1em",
         height: "1em",
