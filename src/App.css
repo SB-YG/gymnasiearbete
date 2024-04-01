@@ -2,13 +2,17 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+}
 body {
   height: auto;
   overflow-x: hidden;
+  background-color: rgb(77, 74, 74);
 }
 .App {
   font-family: sans-serif;
-  //text-align: center;
 }
 .image,
 .button {
@@ -17,30 +21,14 @@ body {
 }
 
 h1 {
-  color: red;
+  color: pink;
   text-align: center;
+  //padding-top: 50px;
+  font-weight: bold;
 }
-
-.navbar {
-  width: 100%;
-  background-color: cadetblue;
+h2 {
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  border-bottom: 4px solid hsla(0, 0%, 0%, 0.54);
 }
-.logo img {
-  height: 30px;
-  width: 30px;
-}
-.menu {
-  display: flex;
-}
-.menu-item {
-  margin: 0 10px;
+p {
   color: white;
-  text-decoration: none;
 }
