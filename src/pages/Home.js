@@ -15,7 +15,7 @@ export default function Home() {
         <Counter />
         <hr />
         <SpotifySingleInfo />
-        <p>new paragraph</p>
+        <p>new paragraph!</p>
       </>
     </>
   );
