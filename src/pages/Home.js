@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Counter from "../components/Counter";
-import ArtistInfo from "../components/ArtistInfo";
+import SpotifySingleInfo from "../components/SpotifySingleInfo";
 
 import { useState } from "react";
 
@@ -13,7 +13,9 @@ export default function Home() {
         <p>Hi there!</p>
         <br />
         <Counter />
-        <ArtistInfo />
+        <hr />
+        <SpotifySingleInfo />
+        <p>new paragraph</p>
       </>
     </>
   );

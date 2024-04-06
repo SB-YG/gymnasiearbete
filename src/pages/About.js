@@ -1,12 +1,10 @@
 import Header from "../components/Header";
-import SpotifyFetch from "../components/SpotifyFetch";
 
 export default function About() {
   return (
     <>
       <Header />
       <h2>About Page</h2>
-      <SpotifyFetch />
       <p>
         Lorem ipsum dolor sit amet. Et alias atque At error ipsa non alias
         eligendi. Aut saepe eius est necessitatibus dolores qui tenetur

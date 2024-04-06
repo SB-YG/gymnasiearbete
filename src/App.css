@@ -9,7 +9,7 @@
 body {
   height: auto;
   overflow-x: hidden;
-  background-color: rgb(77, 74, 74);
+  background-color: #1d1d1f;
 }
 .App {
   font-family: sans-serif;
@@ -31,4 +31,8 @@ h2 {
 }
 p {
   color: white;
+}
+
+.album-image {
+  margin-top: 10px;
 }

@@ -36,7 +36,7 @@ function NavbarLink({ a }) {
     return string.replace(/\b\w/g, (char) => char.toUpperCase());
   };
 
-  return <a href={a}>{capitalizeFirstLetter(a)}</a>;
+  return <a href={"/" + a}>{capitalizeFirstLetter(a)}</a>;
 }
 
 function Image() {
