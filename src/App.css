@@ -26,13 +26,28 @@ h1 {
   //padding-top: 50px;
   font-weight: bold;
 }
-h2 {
-  color: white;
-}
+h2,
+h3,
 p {
   color: white;
 }
 
 .album-image {
   margin-top: 10px;
+}
+
+.homePage p,
+.homePage .trackInfo,
+.trackInfo img {
+  margin-left: 15px;
+}
+.trackInfo a {
+  color: white;
+}
+.homePage h2 {
+  margin-left: 10px;
+}
+
+.trackPage {
+  margin: 5px;
 }

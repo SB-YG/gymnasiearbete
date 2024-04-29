@@ -1,15 +1,12 @@
 import "./App.css";
-import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
-import { useState } from "react";
+import Navbar from "./Layout/Navbar/Navbar";
+import Footer from "./Layout/Footer/Footer";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Home from "./pages/Home";
-import Discography from "./pages/Discography";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import NoPage from "./pages/NoPage";
-import SongDetails from "./pages/Song";
-import Test from "./pages/Test";
+import Home from "./Pages/Home";
+import NoPage from "./Pages/NoPage";
+import Song from "./Pages/Song";
+import Test from "./Pages/Test";
+import About from "./Pages/About";
 
 const App = () => {
   return (
@@ -19,15 +16,12 @@ const App = () => {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Navigate to="/" replace />} />{" "}
+          <Route path="/home" element={<Navigate to="/" replace />} />
           <Route path="/index" element={<Home />} />
-          <Route path="/discography" element={<Discography />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/test" element={<Test />} />
-          <Route path="/song" element={<SongDetails />} />
-          <Route path="/song/:id" element={<SongDetails />} />
-          <Route path="*" element={<NoPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/:type/:id" element={<Song />} />
+          <Route path="*" element={<NoPage />} /> {/* 404 page */}
         </Routes>
       </BrowserRouter>
       <Footer />
