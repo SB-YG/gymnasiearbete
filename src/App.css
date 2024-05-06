@@ -7,22 +7,6 @@
   --secondary-color: #6c757d;
   --white: #ffffff;
 }
-@font-face {
-  font-family: "Louis George Cafe";
-  src: url(/fonts/louisgeorgecafe.ttf);
-}
-@font-face {
-  font-family: "Milker";
-  src:  url(/fonts/milker.otf);
-}
-@font-face {
-  font-family: "Modeska";
-  src: url(/fonts/modeska.ttf);
-}
-@font-face {
-  font-family: "Nexa Rust Sans";
-  src: url(/fonts/nexarustsans.ttf);
-}
 
 body {
   height: auto;
@@ -44,7 +28,7 @@ h1 {
   text-align: center;
   //padding-top: 50px;
   font-weight: bold;
-  font-family: "Louis George", Fallback, sans-serif;
+  font-family: sans-serif;
 }
 h2,
 h3,
