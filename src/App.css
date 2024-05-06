@@ -62,7 +62,6 @@ p {
 
 .react-tabs__tab {
   padding: 6px 20vw !important;
-  z-index: -1;
 }
 
 /* -- About Tab -- */
