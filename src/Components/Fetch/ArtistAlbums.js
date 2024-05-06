@@ -4,9 +4,8 @@
 
 import React, { useState, useEffect } from "react";
 import { useAccessToken } from "./AccessToken";
-import ReturnButton from "../ReturnButton";
 
-const ArtistAlbums = () => {
+const ArtistAlbums = ({ group }) => {
   const accessToken = useAccessToken();
   const [artistData, setArtistData] = useState(null);
   const [error, setError] = useState(null);
@@ -15,7 +14,7 @@ const ArtistAlbums = () => {
     const fetchArtistData = async () => {
       try {
         const response = await fetch(
-          `https://api.spotify.com/v1/artists/53XhwfbYqKCa1cC15pYq2q/albums?include_groups=single%2Calbum&market=SV&limit=50&offset=0`,
+          `https://api.spotify.com/v1/artists/53XhwfbYqKCa1cC15pYq2q/albums?include_groups=${group}&market=SV&limit=50&offset=0`,
           {
             method: "GET",
             headers: {
@@ -45,14 +44,13 @@ const ArtistAlbums = () => {
       {error && <p>Error: {error}</p>}
       {artistData && (
         <div className="trackPage">
-          <ReturnButton />
           <h1 style={{ textDecoration: "underline" }}>{artistData.name}</h1>
 
           <ul>
             {artistData.items.map((album, index) => (
               <li key={index}>
                 <h3>
-                  {index + 1}. {album.name}
+                  {index + 1}. {album.name} - {album.album_type} ({album.id})
                 </h3>
                 <p>Release Date: {album.release_date}</p>
                 <p>Total Tracks: {album.total_tracks}</p>
@@ -73,6 +71,7 @@ const ArtistAlbums = () => {
                     height="75px"
                   />
                 </a>
+                <hr />
               </li>
             ))}
           </ul>

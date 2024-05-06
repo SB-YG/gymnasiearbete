@@ -5,11 +5,30 @@
 :root {
   --primary-color: #007bff;
   --secondary-color: #6c757d;
+  --white: #ffffff;
 }
+@font-face {
+  font-family: "Louis George";
+  src: local("LouisGeorge"), url(/Fonts/LouisGeorge.ttf);
+}
+@font-face {
+  font-family: "Milker";
+  src: local("Milker"), url(/Fonts/Milker.otf);
+}
+@font-face {
+  font-family: "Modeska";
+  src: local("Modeska"), url(/Fonts/Modeska.ttf);
+}
+@font-face {
+  font-family: "Nexa Rust Sans";
+  src: local("Nexa Rust Sans"), url(/Fonts/NexaRustSans.ttf);
+}
+
 body {
   height: auto;
   overflow-x: hidden;
-  background-color: #1d1d1f;
+  //background-color: #1d1d1f;
+  background-color: white;
 }
 .App {
   font-family: sans-serif;
@@ -25,11 +44,12 @@ h1 {
   text-align: center;
   //padding-top: 50px;
   font-weight: bold;
+  font-family: "Louis George", Fallback, sans-serif;
 }
 h2,
 h3,
 p {
-  color: white;
+  color: black;
 }
 
 .album-image {
@@ -50,4 +70,48 @@ p {
 
 .trackPage {
   margin: 5px;
+}
+/* tabs */
+.react-tabs__tab-list {
+  text-align: center;
+}
+
+.react-tabs__tab {
+  padding: 6px 20vw !important;
+  z-index: -1;
+}
+
+/* -- About Tab -- */
+
+.artistInfo {
+  display: flex;
+  font-family: arial, sans-serif;
+}
+
+.artistInfo-Item {
+  width: 50%;
+  padding: 2em;
+  color: #ffffff;
+  background: #eeeeee;
+  min-height: 500px;
+}
+
+.artistInfo-Image {
+  color: #222;
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .artistInfo {
+    flex-direction: column-reverse;
+  }
+
+  .artistInfo-Item {
+    width: auto;
+    min-height: 200px;
+  }
+
+  .artistInfo-Image {
+    background: #aa0000;
+  }
 }

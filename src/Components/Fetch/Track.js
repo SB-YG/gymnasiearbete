@@ -63,7 +63,7 @@ const SpotifyTrack = ({ trackId }) => {
                 marginRight: "auto",
               }}
             >
-              <Image src="spotifyLogo.png" alt="Spotify Logo" size="25px" />
+              <Image src="spotify.png" alt="Spotify" size="25px" />
             </a>
           </h1>
           <p>Title: {trackDetails.name}</p>
@@ -86,7 +86,7 @@ const SpotifyTrack = ({ trackId }) => {
               rel="noreferrer"
               style={{ color: "white", textDecoration: "underline" }}
             >
-              <Image src="spotifyLogo.png" alt="Spotify Logo" size="25px" />
+              <Image src="spotify.png" alt="Spotify Logo" size="25px" />
             </a>
           </p>
           {trackDetails.album && (

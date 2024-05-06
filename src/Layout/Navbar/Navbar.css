@@ -15,9 +15,19 @@ body {
 .nav {
   height: 50px;
   width: 100%;
-  background-color: var(--grey);
-  border-bottom: 1px solid rgba(255 255 255 / 68%);
+  background-color: white;
   position: relative;
+}
+
+.nav::after {
+  background-color: black;
+  opacity: 1;
+  height: 1px;
+  position: absolute;
+  content: "";
+  left: 15px;
+  right: 15px;
+  bottom: 0;
 }
 
 .nav > .nav-header {
@@ -28,8 +38,9 @@ body {
 .nav > .nav-header > .nav-title {
   display: inline-block;
   font-size: 20px;
-  color: #fff;
+  color: #000;
   padding: 10px 10px 10px 10px;
+  font-family: "Nexa Rust Sans", Fallback, sans-serif;
 }
 
 .nav > .nav-btn {
@@ -46,7 +57,7 @@ body {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #efefef;
+  color: #030303;
 }
 
 .nav > .nav-links > a:hover {
@@ -84,7 +95,7 @@ body {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #333;
+    background-color: rgba(255 255 255 / 96%);
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;

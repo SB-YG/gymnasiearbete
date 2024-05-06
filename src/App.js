@@ -7,23 +7,27 @@ import NoPage from "./Pages/NoPage";
 import Song from "./Pages/Song";
 import Test from "./Pages/Test";
 import About from "./Pages/About";
+import Discography from "./Pages/Discography";
 
 const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Navigate to="/" replace />} />
-          <Route path="/index" element={<Home />} />
-          <Route path="/test" element={<Test />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/:type/:id" element={<Song />} />
-          <Route path="*" element={<NoPage />} /> {/* 404 page */}
-        </Routes>
-      </BrowserRouter>
+      <div className="Content">
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Navigate to="/" replace />} />
+            <Route path="/index" element={<Home />} />
+            <Route path="/test" element={<Test />} />
+            <Route path="/discography" element={<Discography />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/:type/:id" element={<Song />} />
+            <Route path="*" element={<NoPage />} /> {/* 404 page */}
+          </Routes>
+        </BrowserRouter>
+      </div>
       <Footer />
     </div>
   );
