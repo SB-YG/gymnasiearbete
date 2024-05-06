@@ -8,10 +8,6 @@
   --white: #ffffff;
 }
 @font-face {
-  font-family: "LouisGeorge";
-  src: local("LouisGeorge"), url(/Fonts/LouisGeorge.ttf);
-}
-@font-face {
   font-family: "Milker";
   src: local("Milker"), url(/Fonts/Milker.otf);
 }
@@ -44,7 +40,7 @@ h1 {
   text-align: center;
   //padding-top: 50px;
   font-weight: bold;
-  font-family: "LouisGeorge", Fallback, sans-serif;
+  font-family: sans-serif;
 }
 h2,
 h3,
