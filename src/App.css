@@ -8,16 +8,20 @@
   --white: #ffffff;
 }
 @font-face {
+  font-family: "Louis George Cafe";
+  src: local("louisgeorgecafe"), url(/Fonts/louisgeorgecafe.ttf);
+}
+@font-face {
   font-family: "Milker";
-  src: local("Milker"), url(/Fonts/Milker.otf);
+  src: local("milker"), url(/Fonts/milker.otf);
 }
 @font-face {
   font-family: "Modeska";
-  src: local("Modeska"), url(/Fonts/Modeska.ttf);
+  src: local("modeska"), url(/Fonts/modeska.ttf);
 }
 @font-face {
   font-family: "Nexa Rust Sans";
-  src: local("Nexa Rust Sans"), url(/Fonts/NexaRustSans.ttf);
+  src: local("nexarustsans"), url(/Fonts/nexarustsans.ttf);
 }
 
 body {
@@ -40,7 +44,7 @@ h1 {
   text-align: center;
   //padding-top: 50px;
   font-weight: bold;
-  font-family: sans-serif;
+  font-family: "Louis George", Fallback, sans-serif;
 }
 h2,
 h3,
