@@ -9,19 +9,19 @@
 }
 @font-face {
   font-family: "Louis George Cafe";
-  src: local("louisgeorgecafe"), url(/Fonts/louisgeorgecafe.ttf);
+  src: local("louisgeorgecafe"), url(/fonts/louisgeorgecafe.ttf);
 }
 @font-face {
   font-family: "Milker";
-  src: local("milker"), url(/Fonts/milker.otf);
+  src: local("milker"), url(/fonts/milker.otf);
 }
 @font-face {
   font-family: "Modeska";
-  src: local("modeska"), url(/Fonts/modeska.ttf);
+  src: local("modeska"), url(/fonts/modeska.ttf);
 }
 @font-face {
   font-family: "Nexa Rust Sans";
-  src: local("nexarustsans"), url(/Fonts/nexarustsans.ttf);
+  src: local("nexarustsans"), url(/fonts/nexarustsans.ttf);
 }
 
 body {
