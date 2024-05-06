@@ -8,7 +8,7 @@
   --white: #ffffff;
 }
 @font-face {
-  font-family: "Louis George";
+  font-family: "LouisGeorge";
   src: local("LouisGeorge"), url(/Fonts/LouisGeorge.ttf);
 }
 @font-face {
@@ -44,7 +44,7 @@ h1 {
   text-align: center;
   //padding-top: 50px;
   font-weight: bold;
-  font-family: "Louis George", Fallback, sans-serif;
+  font-family: "LouisGeorge", Fallback, sans-serif;
 }
 h2,
 h3,
