@@ -7,14 +7,6 @@
   --secondary-color: #6c757d;
   --white: #ffffff;
 }
-body{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-footer{
-    margin-top: auto;
-}
 
 body {
   height: auto;
@@ -24,6 +16,9 @@ body {
 }
 .App {
   font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .image,
 .button {
