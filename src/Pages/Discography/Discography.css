@@ -1,0 +1,114 @@
+/* tabs */
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+.react-tabs__tab-list {
+  text-align: center;
+  border-bottom: 0px solid #aaa;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.react-tabs__tab {
+  padding: 6px 50px !important;
+  display: inline-block;
+  border: 0px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.react-tabs__tab--selected {
+  background: #fff;
+  border-color: #aaa;
+  color: black;
+  border-radius: 5px 5px 0 0;
+}
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+.react-tabs__tab:focus {
+  outline: none;
+}
+.react-tabs__tab:hover,
+.react-tabs__tab--selected:hover {
+  background-color: #0001;
+  backdrop-filter: blur(20px) brightness(0.8);
+  border-radius: 20px;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.react-tabs__tab::after,
+.react-tabs__tab:focus:after {
+  background-color: black;
+  opacity: 1;
+  height: 1px;
+  position: absolute;
+  content: "";
+  left: 15px;
+  right: 15px;
+  bottom: 0;
+}
+
+/* -- Boxes -- */
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.flex-item {
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  padding: 8px;
+  width: 175px;
+  height: 175px;
+  margin-top: 10px;
+  line-height: 200px;
+  color: white;
+  backgroundcolor: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  font-family: system-ui;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-item {
+}
+
+.flex-item a {
+  text-decoration: none;
+  display: inline-block;
+  word-wrap: break-word;
+  width: 100%;
+  color: white;
+  font-weight: 700;
+  line-height: normal;
+  text-shadow: 3px 0 #000, -3px 0 #000, 0 3px #000, 0 -3px #000, 1px 1px #000,
+    -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.albumRelease {
+  color: red;
+  font-size: 5px;
+  line-height: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

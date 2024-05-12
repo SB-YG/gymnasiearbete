@@ -2,12 +2,12 @@ import "./App.css";
 import Navbar from "./Layout/Navbar/Navbar";
 import Footer from "./Layout/Footer/Footer";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Home from "./Pages/Home";
-import NoPage from "./Pages/NoPage";
-import Song from "./Pages/Song";
+import Home from "./Pages/Home/Home";
+import NoPage from "./Pages/NoPage/NoPage";
+import Song from "./Pages/Song/Song";
 import Test from "./Pages/Test";
-import About from "./Pages/About";
-import Discography from "./Pages/Discography";
+import About from "./Pages/About/About";
+import Discography from "./Pages/Discography/Discography";
 
 const App = () => {
   return (

@@ -24,11 +24,12 @@ body {
 }
 
 h1 {
-  color: pink;
+  color: black;
   text-align: center;
   //padding-top: 50px;
+  padding-bottom: 8px;
   font-weight: bold;
-  font-family: sans-serif;
+  font-family: Fallback, sans-serif;
 }
 h2,
 h3,
@@ -41,60 +42,10 @@ p {
 }
 
 .homePage p,
-.homePage .trackInfo,
-.trackInfo img {
+.homePage {
   margin-left: 15px;
 }
-.trackInfo a {
-  color: white;
-}
+
 .homePage h2 {
   margin-left: 10px;
-}
-
-.trackPage {
-  margin: 5px;
-}
-/* tabs */
-.react-tabs__tab-list {
-  text-align: center;
-}
-
-.react-tabs__tab {
-  padding: 6px 20vw !important;
-}
-
-/* -- About Tab -- */
-
-.artistInfo {
-  display: flex;
-  font-family: arial, sans-serif;
-}
-
-.artistInfo-Item {
-  width: 50%;
-  padding: 2em;
-  color: #ffffff;
-  background: #eeeeee;
-  min-height: 500px;
-}
-
-.artistInfo-Image {
-  color: #222;
-  background: #ccc;
-}
-
-@media screen and (max-width: 600px) {
-  .artistInfo {
-    flex-direction: column-reverse;
-  }
-
-  .artistInfo-Item {
-    width: auto;
-    min-height: 200px;
-  }
-
-  .artistInfo-Image {
-    background: #aa0000;
-  }
 }

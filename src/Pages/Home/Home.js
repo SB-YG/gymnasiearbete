@@ -1,6 +1,6 @@
-import Header from "../Components/Header";
-import Counter from "../Components/Counter";
-import SpotifyTrackOG from "../Components/Fetch/Track (OG)";
+import Header from "../../Components/Header";
+import Counter from "../../Components/Counter";
+import SpotifyTrackOG from "../../Components/Fetch/Track (OG)";
 
 import { useState } from "react";
 

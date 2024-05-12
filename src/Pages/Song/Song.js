@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import SpotifyTrack from "../Components/Fetch/Track";
-import SpotifySingle from "../Components/Fetch/Single";
+import SpotifyTrack from "../../Components/Fetch/Track";
+import SpotifySingle from "../../Components/Fetch/Single";
+import "./Song.css";
 
 const Song = () => {
   const { type, id } = useParams(); // URL "./{type}/{id}"

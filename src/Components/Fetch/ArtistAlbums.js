@@ -4,6 +4,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useAccessToken } from "./AccessToken";
+import EmptySpace from "../EmptySpace";
 
 const ArtistAlbums = ({ group }) => {
   const accessToken = useAccessToken();
@@ -42,43 +43,53 @@ const ArtistAlbums = ({ group }) => {
   return (
     <>
       {error && <p>Error: {error}</p>}
-      {artistData && (
+      {artistData ? (
         <div className="trackPage">
           <h1 style={{ textDecoration: "underline" }}>{artistData.name}</h1>
 
-          <ul>
+          <ul className="flex-container">
             {artistData.items.map((album, index) => (
-              <li key={index}>
-                <h3>
-                  {index + 1}. {album.name} - {album.album_type} ({album.id})
-                </h3>
-                <p>Release Date: {album.release_date}</p>
-                <p>Total Tracks: {album.total_tracks}</p>
-                <p>
-                  <a
-                    href={album.external_urls.spotify}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View on Spotify
-                  </a>
-                </p>
+              <li
+                key={index}
+                className="flex-item"
+                style={{
+                  backgroundImage: `url(${album.images[0].url})`,
+                }}
+              >
                 <a href={`${album.album_type}/${album.id}`}>
-                  <img
-                    src={album.images[0].url}
-                    alt={album.name}
-                    width="75px"
-                    height="75px"
-                  />
+                  <AlbumTitle title={album.name} />
                 </a>
-                <hr />
+                {/*<span className="albumRelease">{album.release_date}</span>*/}
               </li>
             ))}
           </ul>
         </div>
+      ) : (
+        <EmptySpace margin="100vh" /> /* innan alla album/singles är renderade (ca 0.5 sekunder), för att inte skapa problem */
       )}
     </>
   );
 };
 
 export default ArtistAlbums;
+
+const AlbumTitle = ({ title }) => {
+  // Komponent för att förkorta ned titlar, bl.a. ta bort [] och () med specifika undantag. Använder regex för att korta ned titlarna
+  let modifiedTitle = title;
+  const hasSquareBrackets = title.includes("[");
+
+  if (hasSquareBrackets) {
+    modifiedTitle = modifiedTitle.replace(/\[.*?\]/g, "");
+  } else {
+    if (!title.includes("(Deluxe)")) {
+      if (!title.includes("feat")) {
+        modifiedTitle = modifiedTitle.replace(/\(.*?\)/g, "");
+      }
+    }
+  }
+  if (title.includes("(With") || title.includes("(with")) {
+    modifiedTitle = modifiedTitle.replace(/\(.*?\)/g, "");
+  }
+
+  return modifiedTitle;
+};

@@ -1,14 +1,14 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import React, { useState, useEffect } from "react";
-import Header from "../Components/Header";
-import ArtistAlbums from "../Components/Fetch/ArtistAlbums";
+import Header from "../../Components/Header";
+import ArtistAlbums from "../../Components/Fetch/ArtistAlbums";
+import "./Discography.css";
 
 export default function Discography() {
   return (
     <>
       <Header />
-      {/*<ArtistAlbums group="single" />*/}
       <Tabs>
         <TabList>
           <Tab>Albums</Tab>

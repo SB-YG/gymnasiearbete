@@ -1,0 +1,12 @@
+.trackPage {
+  margin: 5px;
+}
+
+trackInfo,
+.trackInfo img {
+  margin-left: 15px;
+}
+
+.trackInfo a {
+  color: red;
+}

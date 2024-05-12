@@ -1,11 +1,13 @@
 import "./Footer.css";
 
-export default function Navbar() {
+export default function Footer() {
   return (
     <footer>
-      <div className="footer">
-        <p>a footer with contact info & disclaimers</p>
-      </div>
+      <p>
+        This website was created for educational purposes as a school project.
+        All content used, including images and text, is for demonstration
+        purposes only and belongs to their respective owners.
+      </p>
     </footer>
   );
 }

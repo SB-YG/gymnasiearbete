@@ -1,0 +1,55 @@
+.artistInfo-Banner {
+  background-color: white;
+  height: 275px;
+  background-image: url("Images/banner.png");
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  margin: 0;
+  overflow: hidden;
+  font-family: system-ui;
+  margin-bottom: 8px;
+}
+
+.artistInfo-Links {
+  text-align: center;
+  margin-top: 9px;
+}
+.artistInfo-Text {
+  margin: 0 10px;
+}
+
+/*.artistInfo {
+  display: flex;
+  font-family: arial, sans-serif;
+}
+
+.artistInfo-Item {
+  width: 50%;
+  padding: 2em;
+  color: #ffffff;
+  background: #eeeeee;
+  min-height: 500px;
+}
+
+.artistInfo-Image {
+  color: #222;
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .artistInfo {
+    flex-direction: column-reverse;
+  }
+
+  .artistInfo-Item {
+    width: auto;
+    min-height: 200px;
+  }
+
+  .artistInfo-Image {
+    background: #aa0000;
+  }
+}
+*/

@@ -1,7 +1,7 @@
 import React from "react";
 
-const EmptySpace = () => {
-  return <div style={{ margin: "10px", visibility: "hidden" }}></div>;
+const EmptySpace = ({ margin }) => {
+  return <div style={{ margin: `${margin}`, visibility: "hidden" }}></div>;
 };
 
 export default EmptySpace;
