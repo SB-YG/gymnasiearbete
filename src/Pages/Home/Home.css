@@ -1,6 +1,7 @@
 .welcomeScreen {
   background-color: white;
   height: 250px;
+  background-image: url("/Images/banner.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -65,6 +66,7 @@ h3 span {
 
 .feature {
   margin: 0 10px;
+  width: 47%;
 }
 .feature h4 {
   text-align: center;
@@ -82,6 +84,7 @@ h3 span {
   .feature {
     margin-right: 0;
     margin-bottom: 10px;
+    width: auto;
   }
   .welcomeScreen {
     margin-bottom: 15px;
