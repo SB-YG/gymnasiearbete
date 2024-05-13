@@ -69,7 +69,7 @@ const ArtistInfo = () => {
               background: `url(${artistData.images[0].url}) center center no-repeat`,
             }}
           ></div>
-          <h1>About {artistData.name}</h1>
+          <h1>ABOUT IMAGINE DRAGONS</h1>
           <hr
             style={{
               backgroundColor: "black",

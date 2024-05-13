@@ -7,6 +7,49 @@ trackInfo,
   margin-left: 15px;
 }
 
-.trackInfo a {
-  color: red;
+.track {
+  display: flex;
+  font-family: arial, sans-serif;
+}
+.track-link {
+  position: absolute;
+  margin: 9px 20px 0 4px;
+}
+.track-item {
+  margin-top: 5px;
+  width: 50%;
+  padding: 2em;
+  padding-top: 40px;
+  //color: #ffffff;
+  background: #eeeeee;
+  min-height: 450px;
+}
+.listenOnSpotify {
+  font-size: large;
+}
+
+.track-img {
+  color: #222;
+  background: #ccc;
+}
+
+.copyrights {
+  text-align: center;
+  padding: 10px 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .track {
+    flex-direction: column-reverse;
+  }
+
+  .track-item {
+    width: auto;
+    min-height: 200px;
+    padding-left: 2.5em;
+  }
+
+  .track-link {
+    margin-top: 285px;
+  }
 }

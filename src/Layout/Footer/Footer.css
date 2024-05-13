@@ -1,5 +1,5 @@
 footer {
-  margin-top: auto !Important;
+  margin-top: auto !important;
   width: 100%;
   background: rgb(201, 201, 201);
   background: linear-gradient(
@@ -18,4 +18,10 @@ footer {
 footer p {
   margin-left: 50px;
   margin-right: 50px;
+}
+
+@media (max-width: 600px) {
+  footer p {
+    font-size: 75%;
+  }
 }

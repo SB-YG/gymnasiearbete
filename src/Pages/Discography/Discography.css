@@ -1,3 +1,7 @@
+.discography {
+  margin: 0 10px 15px 10px;
+}
+
 /* tabs */
 .react-tabs {
   -webkit-tap-highlight-color: transparent;
@@ -26,7 +30,7 @@
   border-radius: 5px 5px 0 0;
 }
 .react-tabs__tab--disabled {
-  color: GrayText;
+  color: grey;
   cursor: default;
 }
 .react-tabs__tab:focus {
@@ -56,6 +60,7 @@
   left: 15px;
   right: 15px;
   bottom: 0;
+  z-index: 1;
 }
 
 /* -- Boxes -- */
@@ -88,10 +93,6 @@
   justify-content: center;
   align-items: center;
 }
-
-.flex-item {
-}
-
 .flex-item a {
   text-decoration: none;
   display: inline-block;
@@ -102,13 +103,4 @@
   line-height: normal;
   text-shadow: 3px 0 #000, -3px 0 #000, 0 3px #000, 0 -3px #000, 1px 1px #000,
     -1px -1px #000, 1px -1px #000, -1px 1px #000;
-}
-
-.albumRelease {
-  color: red;
-  font-size: 5px;
-  line-height: 0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }

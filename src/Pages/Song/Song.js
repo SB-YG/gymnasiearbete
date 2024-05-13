@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import SpotifyTrack from "../../Components/Fetch/Track";
 import SpotifySingle from "../../Components/Fetch/Single";
+import SpotifyAlbum from "../../Components/Fetch/Album";
 import "./Song.css";
 
 const Song = () => {
@@ -14,9 +15,7 @@ const Song = () => {
     } else if (type == "single") {
       return <SpotifySingle singleId={id} />;
     } else if (type === "album") {
-      return <p>this is album info</p>; //<SpotifyAlbum albumId={id} />;
-    } else {
-      return <p>This page doesn't work from here</p>;
+      return <SpotifyAlbum albumId={id} />;
     }
   };
 

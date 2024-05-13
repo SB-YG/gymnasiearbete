@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: system-ui !important;
 }
 :root {
   --primary-color: #007bff;
@@ -42,11 +43,6 @@ p {
 
 .album-image {
   margin-top: 10px;
-}
-
-.homePage p,
-.homePage {
-  margin-left: 15px;
 }
 
 .homePage h2 {

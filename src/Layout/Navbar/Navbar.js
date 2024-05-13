@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -6,8 +7,7 @@ export default function Navbar() {
       <input type="checkbox" id="nav-check" />
       <div className="nav-header">
         <div className="nav-title">
-          <Image />
-          Imagine Dragons Explorer
+          <a href="/">The iD Vault</a>
         </div>
       </div>
       <div className="nav-btn">

@@ -59,13 +59,12 @@ const ArtistAlbums = ({ group }) => {
                 <a href={`${album.album_type}/${album.id}`}>
                   <AlbumTitle title={album.name} />
                 </a>
-                {/*<span className="albumRelease">{album.release_date}</span>*/}
               </li>
             ))}
           </ul>
         </div>
       ) : (
-        <EmptySpace margin="100vh" /> /* innan alla album/singles är renderade (ca 0.5 sekunder), för att inte skapa problem */
+        <EmptySpace margin="100vh" /> /* innan alla album/singles är renderade (ca 0.5 sekunder), för att inte skapa problem med uppbyggnad*/
       )}
     </>
   );

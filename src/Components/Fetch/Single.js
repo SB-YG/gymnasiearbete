@@ -11,7 +11,7 @@ const SpotifySingle = ({ singleId }) => {
     const fetchSingleDetails = async () => {
       try {
         const response = await fetch(
-          `https://api.spotify.com/v1/albums/${singleId}`,
+          `https://api.spotify.com/v1/albums/${singleId}?market=SV`,
           {
             method: "GET",
             headers: {
@@ -34,71 +34,100 @@ const SpotifySingle = ({ singleId }) => {
     if (accessToken) {
       fetchSingleDetails();
     }
-  }, [accessToken, singleId]); // Include accessToken and singleId as dependencies
-
+  }, [accessToken, singleId]);
   return (
     <>
       {error && <p>Error: {error}</p>}
       {singleDetails && (
         <div className="trackPage">
           <ReturnButton />
-          <h1
+          <h1>{singleDetails.name}</h1>
+          <hr
             style={{
-              textDecoration: "underline",
-              width: "80%",
-              borderBottom: "3px solid pink",
-              marginLeft: "auto",
-              marginRight: "auto",
+              backgroundColor: "black",
+              height: "2px",
+              marginTop: "-10px",
+              marginLeft: "50px",
+              marginRight: "50px",
+              margin: "-16px 50px 5px 50px",
             }}
-          >
-            {singleDetails.name}
+          />
+
+          <span className="track-link">
             <a
               href={singleDetails.external_urls.spotify}
               target="_blank"
               rel="noreferrer"
+            >
+              <Image src="spotify.png" alt="Spotify Logo" size="35px" />
+            </a>
+          </span>
+          <div class="track">
+            <div className="track-item">
+              <p>
+                <b>{singleDetails.name}</b> is a {singleDetails.album_type} made
+                by{" "}
+                {singleDetails.artists.map((artist, index) => (
+                  <>
+                    <a
+                      href={artist.external_urls.spotify}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{ color: "black" }}
+                    >
+                      {artist.name}
+                    </a>
+                    {/* comma if not the last artist */}
+                    {index !== singleDetails.artists.length - 1 && ", "}
+                  </>
+                ))}
+                .<br />
+                The {singleDetails.album_type} was released on{" "}
+                {singleDetails.release_date}.
+              </p>
+              {singleDetails.preview_url ? (
+                <>
+                  Preview of {singleDetails.name}:
+                  <audio
+                    src={singleDetails.preview_url}
+                    controls
+                    style={{ border: "1px solid black" }}
+                  />
+                </>
+              ) : (
+                <div className="listenOnSpotify">
+                  <br />
+                  <a
+                    href={singleDetails.external_urls.spotify}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ color: "black", textDecoration: "none" }}
+                  >
+                    Listen on to {singleDetails.name}
+                  </a>{" "}
+                  <a
+                    href={singleDetails.external_urls.spotify}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ color: "black" }}
+                  >
+                    on Spotify
+                  </a>
+                  .
+                </div>
+              )}
+            </div>
+            <div
+              className="track-item track-img"
               style={{
-                color: "white",
-                textDecoration: "underline",
-                marginLeft: "15px",
-                marginRight: "auto",
+                backgroundImage: `url(${singleDetails.images[0].url})`,
+                backgroundPosition: "center center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
               }}
-            >
-              <Image src="spotifyLogo.png" alt="Spotify Logo" size="25px" />
-            </a>
-          </h1>
-          <p>
-            Title: {singleDetails.name} - {singleDetails.album_type}
-          </p>
-          <p>Artist: {singleDetails.artists[0].name}</p>
-          <p>Album: {singleDetails.name}</p>
-          <p>Album release date: {singleDetails.release_date}</p>
-          <p>Preview:</p>
-          {singleDetails.preview_url && (
-            <audio
-              src={singleDetails.preview_url}
-              controls
-              style={{ border: "1px solid white" }}
-            />
-          )}
-          <p>
-            Listen on spotify:{" "}
-            <a
-              href={singleDetails.external_urls.spotify}
-              target="_blank"
-              rel="noreferrer"
-              style={{ color: "white", textDecoration: "underline" }}
-            >
-              <Image src="spotifyLogo.png" alt="Spotify Logo" size="25px" />
-            </a>
-          </p>
-          {singleDetails.images[0].url && (
-            <img
-              src={singleDetails.images[0].url}
-              alt={singleDetails.name}
-              className="album-image"
-              style={{ width: "175px", height: "auto" }}
-            />
-          )}
+            ></div>
+          </div>
+          <div className="copyrights">{singleDetails.copyrights[0].text}</div>
         </div>
       )}
     </>
