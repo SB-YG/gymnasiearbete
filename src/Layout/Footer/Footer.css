@@ -21,6 +21,9 @@ footer p {
 }
 
 @media (max-width: 600px) {
+  footer {
+    background: rgb(231, 231, 231);
+  }
   footer p {
     font-size: 75%;
   }
