@@ -1,7 +1,6 @@
 .welcomeScreen {
   background-color: white;
   height: 250px;
-  background-image: url("Images/banner.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

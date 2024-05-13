@@ -5,7 +5,10 @@ import { useState } from "react";
 export default function Home() {
   return (
     <div className="homePage">
-      <div className="welcomeScreen"></div>
+      <div
+        className="welcomeScreen"
+        style={{ backgroundImage: "url('/Images/banner.png')" }}
+      ></div>
       <h2>Dive Deep into the World of Imagine Dragons</h2>
       <hr
         style={{
