@@ -1,5 +1,5 @@
 # Gymnasiearbete
-**Ystad Gymnasium, Park, vårterminen 2024**   
+**Ystad Gymnasium, Vårterminen 2024**   
 **Elev**: Sigge Brandt   
 **Klass**: EE21A-DATA   
 **Ämne**: Utveckling av webbapplikation med React och API-tjänster   
