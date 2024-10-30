@@ -20,6 +20,6 @@ CodeSandbox används p.g.a. skolpolicyer som förhindrar användandet av Node.JS
 ## Redovisning
 Det färdiga projektet finns tillgängligt på ett flertal olika källor, 
 
-- [GitHub](https://github.com/SB-YG/gymnasiearbete)
+- [GitHub Repository](https://github.com/SB-YG/gymnasiearbete)
 - [Webbplats (Vercel)](https://gymnasiearbete-sb.vercel.app)
 - [CodeSandbox](https://codesandbox.io/p/sandbox/gymnasiearbete-final-ltpls4)
